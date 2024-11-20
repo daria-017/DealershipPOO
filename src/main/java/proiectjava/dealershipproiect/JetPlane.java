@@ -12,13 +12,15 @@ public class JetPlane extends Vehicle {
     private int maxAltitude; // Altitudine maximă (în picioare sau metri)
     private int maxRange;    // Distanța maximă (în kilometri)
     private int maxSpeed;    // Viteza maximă (în km/h)
+    private int engineCycles;         // Număr de cicluri ale motorului
     private boolean militaryAircraft; // Este avion militar sau nu
     private boolean luggageCapacity;  // Are capacitate pentru bagaje?
-    private String propulsionSystem;  // Tipul sistemului de propulsie
     private boolean highSpeed;        // Este un avion de mare viteză?
-    private int engineCycles;         // Număr de cicluri ale motorului
-    private Engine engine;            // Instanță a clasei Engine
-    private Transmission transmission;// Instanță a clasei Transmission
+    private String propulsionSystem;  // Tipul sistemului de propulsie
+    
+    
+    //private Engine engine;            // Instanță a clasei Engine
+    //private Transmission transmission;// Instanță a clasei Transmission
 
     // Constructor implicit
     public JetPlane() {
@@ -26,21 +28,23 @@ public class JetPlane extends Vehicle {
         this.maxAltitude = 0;
         this.maxRange = 0;
         this.maxSpeed = 0;
+        this.engineCycles = 0;
         this.militaryAircraft = false;
         this.luggageCapacity = false;
-        this.propulsionSystem = "";
+
         this.highSpeed = false;
-        this.engineCycles = 0;
-        this.engine = null;
-        this.transmission = null;
+        this.propulsionSystem = "unknown";
+
+        //this.engine = null;
+        //this.transmission = null;
     }
 
     // Constructor cu toți parametrii
     public JetPlane(int id, int year, int price, int weight, String brand, String model, String color,
-                    Transmission transmission, Engine engine, int maxAltitude, int maxRange, int maxSpeed,
+                    /*Transmission transmission, Engine engine*/, int maxAltitude, int maxRange, int maxSpeed,
                     boolean militaryAircraft, boolean luggageCapacity, String propulsionSystem, boolean highSpeed,
                     int engineCycles) {
-        super(id, year, price, weight, brand, model, color, transmission, engine, null);
+        super(id, year, price, weight, brand, model, color, /*transmission, engine*/ photo);
         this.maxAltitude = maxAltitude;
         this.maxRange = maxRange;
         this.maxSpeed = maxSpeed;
@@ -49,14 +53,14 @@ public class JetPlane extends Vehicle {
         this.propulsionSystem = propulsionSystem;
         this.highSpeed = highSpeed;
         this.engineCycles = engineCycles;
-        this.engine = engine;
-        this.transmission = transmission;
+       // this.engine = engine;
+       // this.transmission = transmission;
     }
 
     // Constructor de copiere
     public JetPlane(JetPlane jetplane) {
         super(jetplane.id, jetplane.year, jetplane.price, jetplane.weight, jetplane.brand, jetplane.model, jetplane.color,
-              jetplane.transmission, jetplane.engine, jetplane.photo);
+              /*jetplane.transmission, jetplane.engine,*/ jetplane.photo);
         this.maxAltitude = jetplane.maxAltitude;
         this.maxRange = jetplane.maxRange;
         this.maxSpeed = jetplane.maxSpeed;
@@ -65,8 +69,8 @@ public class JetPlane extends Vehicle {
         this.propulsionSystem = jetplane.propulsionSystem;
         this.highSpeed = jetplane.highSpeed;
         this.engineCycles = jetplane.engineCycles;
-        this.engine = jetplane.engine;
-        this.transmission = jetplane.transmission;
+        //this.engine = jetplane.engine;
+        //this.transmission = jetplane.transmission;
     }
 
     // Getters și Setters
@@ -134,7 +138,7 @@ public class JetPlane extends Vehicle {
         this.engineCycles = engineCycles;
     }
 
-    public Engine getEngine() {
+  /*  public Engine getEngine() {
         return engine;
     }
 
@@ -149,7 +153,7 @@ public class JetPlane extends Vehicle {
     public void setTransmission(Transmission transmission) {
         this.transmission = transmission;
     }
-
+*/
     // Suprascrierea metodei toString()
     @Override
     public String toString() {
