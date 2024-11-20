@@ -4,6 +4,9 @@
  */
 package proiectjava.dealershipproiect;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Daria
@@ -35,116 +38,115 @@ public class Helicopter extends Vehicle {
         this.rotorType = "unknown";
     }
 
-//    // Constructor cu toți parametrii
-//    public Helicopter(int id, int year, int price, int weight, String brand, String model, String color,/*
-//                      Transmission transmission, Engine engine,*/ int maxAltitude, int maxRange, int maxSpeed,
-//                      short numberOfBlades, int loudness, int engineCycles, boolean militaryAircraft,
-//                      boolean cargo, String rotorType) {
-//        super(id, year, price, weight, brand, model, color, /*transmission, engine,*/ photo);
-//        this.maxAltitude = maxAltitude;
-//        this.maxRange = maxRange;
-//        this.maxSpeed = maxSpeed;
-//        this.numberOfBlades = numberOfBlades;
-//        this.loudness = loudness;
-//        this.engineCycles = engineCycles;
-//        this.militaryAircraft = militaryAircraft;
-//        this.cargo = cargo;
-//        this.rotorType = rotorType;
-//    }
-//
-//    // Constructor de copiere
-//    public Helicopter(Helicopter other) {
-//        super(other.id, other.year, other.price, other.weight, other.brand, other.model, other.color,
-//              /*other.transmission, other.engine,*/ other.photo);
-//        this.maxAltitude = other.maxAltitude;
-//        this.maxRange = other.maxRange;
-//        this.maxSpeed = other.maxSpeed;
-//        this.numberOfBlades = other.numberOfBlades;
-//        this.loudness = other.loudness;
-//        this.engineCycles = other.engineCycles;
-//        this.militaryAircraft = other.militaryAircraft;
-//        this.cargo = other.cargo;
-//        this.rotorType = other.rotorType;
-//    }
-//
-//    // Getters și Setters
-//    public int getMaxAltitude() {
-//        return maxAltitude;
-//    }
-//
-//    public void setMaxAltitude(int maxAltitude) {
-//        this.maxAltitude = maxAltitude;
-//    }
-//
-//    public int getMaxRange() {
-//        return maxRange;
-//    }
-//
-//    public void setMaxRange(int maxRange) {
-//        this.maxRange = maxRange;
-//    }
-//
-//    public int getMaxSpeed() {
-//        return maxSpeed;
-//    }
-//
-//    public void setMaxSpeed(int maxSpeed) {
-//        this.maxSpeed = maxSpeed;
-//    }
-//
-//    public short getNumberOfBlades() {
-//        return numberOfBlades;
-//    }
-//
-//    public void setNumberOfBlades(short numberOfBlades) {
-//        this.numberOfBlades = numberOfBlades;
-//    }
-//
-//    public int getLoudness() {
-//        return loudness;
-//    }
-//
-//    public void setLoudness(int loudness) {
-//        this.loudness = loudness;
-//    }
-///*
-//    public int getEngineCycles() {
-//        return engineCycles;
-//    }
-//
-//    public void setEngineCycles(int engineCycles) {
-//        this.engineCycles = engineCycles;
-//    }
-//*/
-//    public boolean isMilitaryAircraft() {
-//        return militaryAircraft;
-//    }
-//
-//    public void setMilitaryAircraft(boolean militaryAircraft) {
-//        this.militaryAircraft = militaryAircraft;
-//    }
-//
-//    public boolean isCargo() {
-//        return cargo;
-//    }
-//
-//    public void setCargo(boolean cargo) {
-//        this.cargo = cargo;
-//    }
-//
-//    public String getRotorType() {
-//        return rotorType;
-//    }
-//
-//    public void setRotorType(String rotorType) {
-//        this.rotorType = rotorType;
-//    }
-//
-//    // Suprascrierea metodei toString()
-//    @Override
-//    public String toString() {
-//        return "Helicopter {"
-//                
-//    }
+    // Constructor cu toți parametrii
+    public Helicopter(int id, String brand, String model, int year, Color color, int price, int weight,
+                    Engine engine, Transmission transmission, ImageIcon photo, int maxAltitude, int maxRange, int maxSpeed,
+                      short numberOfBlades, int loudness, int engineCycles, boolean militaryAircraft,
+                      boolean cargo, String rotorType) {
+        super(id, brand, model, year, color, price, weight, engine, transmission, photo);
+        this.maxAltitude = maxAltitude;
+        this.maxRange = maxRange;
+        this.maxSpeed = maxSpeed;
+        this.numberOfBlades = numberOfBlades;
+        this.loudness = loudness;
+        this.engineCycles = engineCycles;
+        this.militaryAircraft = militaryAircraft;
+        this.cargo = cargo;
+        this.rotorType = rotorType;
+    }
+
+    // Constructor de copiere
+    public Helicopter(Helicopter other) {
+        super(other);
+        this.maxAltitude = other.maxAltitude;
+        this.maxRange = other.maxRange;
+        this.maxSpeed = other.maxSpeed;
+        this.numberOfBlades = other.numberOfBlades;
+        this.loudness = other.loudness;
+        this.engineCycles = other.engineCycles;
+        this.militaryAircraft = other.militaryAircraft;
+        this.cargo = other.cargo;
+        this.rotorType = other.rotorType;
+    }
+
+    // Getters și Setters
+    public int getMaxAltitude() {
+        return maxAltitude;
+    }
+
+    public void setMaxAltitude(int maxAltitude) {
+        this.maxAltitude = maxAltitude;
+    }
+
+    public int getMaxRange() {
+        return maxRange;
+    }
+
+    public void setMaxRange(int maxRange) {
+        this.maxRange = maxRange;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public short getNumberOfBlades() {
+        return numberOfBlades;
+    }
+
+    public void setNumberOfBlades(short numberOfBlades) {
+        this.numberOfBlades = numberOfBlades;
+    }
+
+    public int getLoudness() {
+        return loudness;
+    }
+
+    public void setLoudness(int loudness) {
+        this.loudness = loudness;
+    }
+
+    public int getEngineCycles() {
+        return engineCycles;
+    }
+
+    public void setEngineCycles(int engineCycles) {
+        this.engineCycles = engineCycles;
+    }
+
+    public boolean isMilitaryAircraft() {
+        return militaryAircraft;
+    }
+
+    public void setMilitaryAircraft(boolean militaryAircraft) {
+        this.militaryAircraft = militaryAircraft;
+    }
+
+    public boolean isCargo() {
+        return cargo;
+    }
+
+    public void setCargo(boolean cargo) {
+        this.cargo = cargo;
+    }
+
+    public String getRotorType() {
+        return rotorType;
+    }
+
+    public void setRotorType(String rotorType) {
+        this.rotorType = rotorType;
+    }
+
+    // Suprascrierea metodei toString()
+    @Override
+     public String toString() {
+        return "Helicopter "+super.toString()+"max altitude: "+maxAltitude+" max range: "+maxRange+" max speed: "+maxSpeed+" engine cycles: "+engineCycles+" number of blades"+numberOfBlades+" loudness: "+loudness+
+                "military aircraft:"+militaryAircraft+" cargo: "+cargo+ "rotor type: "+rotorType;
+    }
 }
 
