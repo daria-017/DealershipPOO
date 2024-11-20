@@ -4,7 +4,7 @@ package proiectjava.dealershipproiect;
  *
  * @author Dragos :>
  */
-public class SailBoat extends Vehicle{
+public class SailBoat {
 
     private int nauticalMiles;
     private Engine engine;
@@ -12,7 +12,7 @@ public class SailBoat extends Vehicle{
     private boolean sonar;
     private boolean hasLifeBuoy;
 
-    SailBoat() {
+    public SailBoat() {
         nauticalMiles = 0;
         engine = new Engine();
         transmission = new Transmission();
@@ -20,7 +20,7 @@ public class SailBoat extends Vehicle{
         hasLifeBuoy = false;
     }
 
-    SailBoat(int nauticalMiles, Engine engine, Transmission transmission, boolean sonar, boolean hasLifeBuoy) {
+    public SailBoat(int nauticalMiles, Engine engine, Transmission transmission, boolean sonar, boolean hasLifeBuoy) {
         this.nauticalMiles = nauticalMiles;
         this.engine = engine;
         this.transmission = transmission;
@@ -28,7 +28,7 @@ public class SailBoat extends Vehicle{
         this.hasLifeBuoy = hasLifeBuoy;
     }
 
-    SailBoat(sailBoat b) {
+    public SailBoat(SailBoat b) {
         this.nauticalMiles = b.nauticalMiles;
         this.engine = b.engine;
         this.transmission = b.transmission;
