@@ -56,17 +56,17 @@ public class JetPlane extends Vehicle {
     // Constructor de copiere
     public JetPlane(JetPlane jetplane) {
         super(jetplane.id, jetplane.year, jetplane.price, jetplane.weight, jetplane.brand, jetplane.model, jetplane.color,
-              other.transmission, other.engine, other.photo);
-        this.maxAltitude = other.maxAltitude;
-        this.maxRange = other.maxRange;
-        this.maxSpeed = other.maxSpeed;
-        this.militaryAircraft = other.militaryAircraft;
-        this.luggageCapacity = other.luggageCapacity;
-        this.propulsionSystem = other.propulsionSystem;
-        this.highSpeed = other.highSpeed;
-        this.engineCycles = other.engineCycles;
-        this.engine = other.engine;
-        this.transmission = other.transmission;
+              jetplane.transmission, jetplane.engine, jetplane.photo);
+        this.maxAltitude = jetplane.maxAltitude;
+        this.maxRange = jetplane.maxRange;
+        this.maxSpeed = jetplane.maxSpeed;
+        this.militaryAircraft = jetplane.militaryAircraft;
+        this.luggageCapacity = jetplane.luggageCapacity;
+        this.propulsionSystem = jetplane.propulsionSystem;
+        this.highSpeed = jetplane.highSpeed;
+        this.engineCycles = jetplane.engineCycles;
+        this.engine = jetplane.engine;
+        this.transmission = jetplane.transmission;
     }
 
     // Getters și Setters
