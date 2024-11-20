@@ -33,7 +33,17 @@ String suspensionType;
         this.rackCapacity = rackCapacity;
         this.suspensionType = suspensionType;
     }
-    @Override
+        public Atv(Atv copy)
+        {
+            super(copy);//continua asta
+        this.Usage = copy.Usage;
+        this.forYouth = copy.forYouth;
+        this.offroad = copy.offroad;
+        this.rackCapacity = copy.rackCapacity;
+        this.suspensionType = copy.suspensionType;
+        }
+        
+        @Override
     public String toString() {
         return super.toString()+"Atv{" + "Usage=" + Usage + ", forYouth=" + forYouth + ", offroad=" + offroad + ", rackCapacity=" + rackCapacity + ", suspensionType=" + suspensionType + '}';
     }
