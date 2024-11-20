@@ -2,8 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package proiectjava.dealershippoo;
-
+package proiectjava.dealershipproiect;
 /**
  *
  * @author Raul
@@ -12,22 +11,24 @@ package proiectjava.dealershippoo;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 
-private class Jetski extends Vehicles{
+public class Jetski extends Vehicle{
     private int nauticalMiles;
     private boolean handlebars;
     private String propulsionSystem;
-    private Engine engine;
-    //Transmission
 
     public Jetski(){
-        this(0,false,"",new Engine("",0,0,""));
+        super();
+        this.nauticalMiles=nauticalMiles;
+        this.handlebars=false;
+        this.propulsionSystem=propulsionSystem;
     }
     
-    public Jetski(int nauticalMiles, boolean handlebars, String propulsionSystem, Engine engine) {
+    public Jetski(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+            ImageIcon photo,int nauticalMiles, boolean handlebars, String propulsionSystem) {
+        super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.nauticalMiles = nauticalMiles;
         this.handlebars = handlebars;
         this.propulsionSystem = propulsionSystem;
-        this.engine = engine;
     }
 
     public int getNauticalMiles() {
@@ -54,22 +55,14 @@ private class Jetski extends Vehicles{
         this.propulsionSystem = propulsionSystem;
     }
 
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
-
-    public Jetski(Jetski copy) {
-        this.nauticalMiles = copy.nauticalMiles;
-        this.handlebars = copy.handlebars;
-        this.propulsionSystem = copy.propulsionSystem;
-        this.engine = copy.engine;
+    public Jetski(Jetski jetski) {
+        this.nauticalMiles = jetski.nauticalMiles;
+        this.handlebars = jetski.handlebars;
+        this.propulsionSystem = jetski.propulsionSystem;
     }
     
     @Override
     public String toString() {
-        return "Jetski{" + "nauticalMiles=" + nauticalMiles + ", handlebars=" + handlebars + ", propulsionSystem=" + propulsionSystem + ", engine=" + engine + '}';
+        return "Jetski{" + "nauticalMiles=" + nauticalMiles + ", handlebars=" + handlebars + ", propulsionSystem=" + propulsionSystem + '}';
     }
+}
