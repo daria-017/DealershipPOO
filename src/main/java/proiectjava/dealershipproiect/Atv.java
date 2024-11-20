@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proiectjava.dealershipproiect;
-
+import javax.swing.ImageIcon;
+import java.awt.Color;
 /**
  *
  * @author hcosm
@@ -25,8 +26,9 @@ String suspensionType;
         this.suspensionType = "Unknown";
     }
         
-        public Atv(String Usage, boolean forYouth, boolean offroad, int rackCapacity, String suspensionType) {
-        super(id, brand, model,year, color, price, weight, engine, transmission, photo);
+        public Atv(int id, String brand, String model,int year, Color color, int price,int weight, Engine engine, Transmission transmission, ImageIcon photo,
+                String Usage, boolean forYouth, boolean offroad, int rackCapacity, String suspensionType) {
+         super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.Usage = Usage;
         this.forYouth = forYouth;
         this.offroad = offroad;
