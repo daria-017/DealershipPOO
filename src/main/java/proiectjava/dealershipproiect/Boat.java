@@ -4,7 +4,7 @@ package proiectjava.dealershipproiect;
  *
  * @author Dragos :>
  */
-public class Boat {
+public class Boat extends Vehicle{
 
     private int nauticalMiles;
     private Engine engine;
