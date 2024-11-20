@@ -13,10 +13,10 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 
 public class Yacht extends Vehicles{
-    int nauticalMiles;
-    int maxCrew;
-    String flag;
-    Engine engine;
+    private int nauticalMiles;
+    private int maxCrew;
+    private String flag;
+    private Engine engine;
     //transmission
     
     public Yacht(){
