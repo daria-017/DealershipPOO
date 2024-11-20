@@ -24,7 +24,7 @@ public class Yacht extends Vehicle{
         this.flag="";
     }
 
-    public Yacht(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+    public Yacht( int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
             ImageIcon photo,int nauticalMiles, int maxCrew, String flag) {
         super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.nauticalMiles = nauticalMiles;
