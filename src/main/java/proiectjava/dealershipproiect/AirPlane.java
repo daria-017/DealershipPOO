@@ -63,9 +63,7 @@ public class AirPlane extends Vehicle {
         this.engineCycles = other.engineCycles;
     }
 
-    private AirPlane(int id, int year, int price, int weight, String brand, String model, Color color, Transmission transmission, Engine engine, ImageIcon photo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
 
     // Getters și Setters
     public int getMaxAltitude() {
