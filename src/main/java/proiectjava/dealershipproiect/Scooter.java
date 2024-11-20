@@ -4,11 +4,14 @@
  */
 package proiectjava.dealershipproiect;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author hcosm
  */
-public class Scooter {
+public class Scooter extends Vehicle{
     String type;
     boolean abs;
     boolean offroad;
@@ -17,6 +20,7 @@ public class Scooter {
     
             public Scooter() 
         {
+         super();
         this.type = "Unknown";
         this.abs = false;
         this.offroad = false;
@@ -26,13 +30,22 @@ public class Scooter {
             
         public Scooter(String type, boolean abs, boolean offroad, boolean sport, int topSpeed) 
         {
+          super(id, brand,model,year,color,price, short weight,  Engine engine,Transmission transmission, ImageIcon photo);
         this.type = type;
         this.abs = abs;
         this.offroad = offroad;
         this.sport = sport;
         this.topSpeed = topSpeed;
     }
-        
+        Scooter(Scooter copy)
+        {
+         super(copy);
+        this.type = copy.type;
+        this.abs = copy.abs;
+        this.offroad = copy.offroad;
+        this.sport = copy.sport;
+        this.topSpeed = copy.topSpeed;
+        }
     public String getType() {
         return type;
     }

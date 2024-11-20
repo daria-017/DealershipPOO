@@ -35,7 +35,15 @@ public class Drone extends Vehicle {
         this.magnetometer = magnetometer;
         this.numberOfSensors = numberOfSensors;
     }
-
+    public Drone(Drone copy)
+    {
+    super(copy);
+          this.engineCycles = copy.engineCycles;
+        this.surveillance = copy.surveillance;
+        this.size = copy.size;
+        this.magnetometer = copy.magnetometer;
+        this.numberOfSensors = copy.numberOfSensors;
+    }
     public int getEngineCycles() {
         return engineCycles;
     }
