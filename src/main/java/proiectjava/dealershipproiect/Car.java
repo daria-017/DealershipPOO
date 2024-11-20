@@ -4,6 +4,9 @@
  */
 package proiectjava.dealershipproiect;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author aa437
@@ -14,10 +17,18 @@ public class Car extends Vehicle {
     private String body; //(Cabrio, SUV etc)
     
     public Car() {
-        this(0, 0, false, false, false, "");
+        super();
+        this.mileage = 0;
+        this.topSpeed = 0;
+        this.isConvertible = false;
+        this.abs = false;
+        this.gps = false;
+        this.body = "";
     }
     
-    public Car(int mileage, int topSpeed, boolean isConvertible, boolean abs, boolean gps, String body) {
+    public Car(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+            ImageIcon photo, int mileage, int topSpeed, boolean isConvertible, boolean abs, boolean gps, String body) {
+        super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.mileage = mileage;
         this.topSpeed = topSpeed;
         this.isConvertible = isConvertible;
@@ -27,6 +38,7 @@ public class Car extends Vehicle {
     }
     
     public Car(Car car) {
+        super(car);
         this.mileage = car.mileage;
         this.topSpeed = car.topSpeed;
         this.isConvertible = car.isConvertible;

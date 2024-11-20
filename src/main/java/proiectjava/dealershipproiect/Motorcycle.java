@@ -4,6 +4,9 @@
  */
 package proiectjava.dealershipproiect;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author aa437
@@ -14,10 +17,17 @@ public class Motorcycle extends Vehicle {
     private String type; // Crossroad, Speed etc.
 
     public Motorcycle() {
-        this(0, 0, false, false, "");
+        super();
+        this.mileage = 0;
+        this.topSpeed = 0;
+        this.abs = false;
+        this.sport = false;
+        this.type = "";
     }
 
-    public Motorcycle(int mileage, int topSpeed, boolean abs, boolean sport, String type) {
+    public Motorcycle(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+            ImageIcon photo, int mileage, int topSpeed, boolean abs, boolean sport, String type) {
+        super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.mileage = mileage;
         this.topSpeed = topSpeed;
         this.abs = abs;

@@ -4,6 +4,9 @@
  */
 package proiectjava.dealershipproiect;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author aa437
@@ -13,10 +16,17 @@ public class Truck extends Vehicle {
     private boolean backupSound, cargoSensor;
     
     public Truck() {
-        this(0, 0, 0, false, false);
+        super();
+        this.mileage = 0;
+        this.maxWeight = 0;
+        this.capacityInKg = 0;
+        this.backupSound = false;
+        this.cargoSensor = false;
     }
     
-    public Truck(int mileage, int maxWeight, int capacityInKg, boolean backupSound, boolean cargoSensor) {
+    public Truck(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+            ImageIcon photo, int mileage, int maxWeight, int capacityInKg, boolean backupSound, boolean cargoSensor) {
+        super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.mileage = mileage;
         this.maxWeight = maxWeight;
         this.capacityInKg = capacityInKg;
@@ -25,6 +35,7 @@ public class Truck extends Vehicle {
     }
     
     public Truck(Truck truck) {
+        super(truck);
         this.mileage = truck.mileage;
         this.maxWeight = truck.maxWeight;
         this.capacityInKg = truck.capacityInKg;
