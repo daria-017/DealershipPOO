@@ -88,6 +88,6 @@ public class Truck extends Vehicle {
     // toString method:
     @Override
     public String toString() {
-        return "Truck{" + "mileage=" + this.mileage + ", maxWeight=" + this.maxWeight + ", capacityInKg=" + this.capacityInKg + ", backupSound=" + this.backupSound + ", cargoSensor=" + this.cargoSensor + '}';
+        return super.toString() + " Truck{" + "mileage=" + this.mileage + ", maxWeight=" + this.maxWeight + ", capacityInKg=" + this.capacityInKg + ", backupSound=" + this.backupSound + ", cargoSensor=" + this.cargoSensor + '}';
     }
 }

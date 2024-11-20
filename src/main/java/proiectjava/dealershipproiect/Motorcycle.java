@@ -88,6 +88,6 @@ public class Motorcycle extends Vehicle {
     // toString method:
     @Override
     public String toString() {
-        return "Motorcycle{" + "mileage=" + this.mileage + ", topSpeed=" + this.topSpeed + ", abs=" + this.abs + ", sport=" + this.sport + ", type=" + this.type + '}';
+        return super.toString() + " Motorcycle{" + "mileage=" + this.mileage + ", topSpeed=" + this.topSpeed + ", abs=" + this.abs + ", sport=" + this.sport + ", type=" + this.type + '}';
     }
 }
