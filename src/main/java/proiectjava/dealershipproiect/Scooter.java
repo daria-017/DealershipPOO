@@ -8,7 +8,7 @@ package proiectjava.dealershipproiect;
  *
  * @author hcosm
  */
-public class Scooter {
+public class Scooter extends Vehicle{
     String type;
     boolean abs;
     boolean offroad;
@@ -17,6 +17,7 @@ public class Scooter {
     
             public Scooter() 
         {
+         super();
         this.type = "Unknown";
         this.abs = false;
         this.offroad = false;
@@ -26,6 +27,7 @@ public class Scooter {
             
         public Scooter(String type, boolean abs, boolean offroad, boolean sport, int topSpeed) 
         {
+          super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.type = type;
         this.abs = abs;
         this.offroad = offroad;
