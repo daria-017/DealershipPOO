@@ -36,6 +36,7 @@ public class Motorcycle extends Vehicle {
     }
     
     public Motorcycle(Motorcycle motorcycle) {
+        super(motorcycle);
         this.mileage = motorcycle.mileage;
         this.topSpeed = motorcycle.topSpeed;
         this.abs = motorcycle.abs;
