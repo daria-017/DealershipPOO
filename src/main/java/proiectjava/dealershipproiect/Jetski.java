@@ -19,6 +19,10 @@ private class Jetski extends Vehicles{
     private Engine engine;
     //Transmission
 
+    public Jetski(){
+        this(0,false,"",new Engine("",0,0,""));
+    }
+    
     public Jetski(int nauticalMiles, boolean handlebars, String propulsionSystem, Engine engine) {
         this.nauticalMiles = nauticalMiles;
         this.handlebars = handlebars;
@@ -58,6 +62,13 @@ private class Jetski extends Vehicles{
         this.engine = engine;
     }
 
+    public Jetski(Jetski copy) {
+        this.nauticalMiles = copy.nauticalMiles;
+        this.handlebars = copy.handlebars;
+        this.propulsionSystem = copy.propulsionSystem;
+        this.engine = copy.engine;
+    }
+    
     @Override
     public String toString() {
         return "Jetski{" + "nauticalMiles=" + nauticalMiles + ", handlebars=" + handlebars + ", propulsionSystem=" + propulsionSystem + ", engine=" + engine + '}';
