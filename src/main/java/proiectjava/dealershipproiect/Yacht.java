@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package proiectjava.dealershippoo;
+package proiectjava.dealershipproiect;
 
 /**
  *
@@ -12,22 +12,24 @@ package proiectjava.dealershippoo;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 
-public class Yacht extends Vehicles{
+public class Yacht extends Vehicle{
     private int nauticalMiles;
     private int maxCrew;
     private String flag;
-    private Engine engine;
-    //transmission
     
     public Yacht(){
-        this(0,0,"",new Engine("",0,0,""));
+        super();
+        this.nauticalMiles=0;
+        this.maxCrew=0;
+        this.flag="";
     }
 
-    public Yacht(int nauticalMiles, int maxCrew, String flag, Engine engine) {
+    public Yacht(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+            ImageIcon photo,int nauticalMiles, int maxCrew, String flag) {
+        super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.nauticalMiles = nauticalMiles;
         this.maxCrew = maxCrew;
         this.flag = flag;
-        this.engine = engine;
     }
 
     public int getNauticalMiles() {
@@ -53,26 +55,16 @@ public class Yacht extends Vehicles{
     public void setFlag(String flag) {
         this.flag = flag;
     }
-
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
     
-    
-    public Yacht(Yacht copy) {
-        this.nauticalMiles = copy.nauticalMiles;
-        this.maxCrew = copy.maxCrew;
-        this.flag = copy.flag;
-        this.engine = copy.engine;
+    public Yacht(Yacht yacht) {
+        this.nauticalMiles = yacht.nauticalMiles;
+        this.maxCrew = yacht.maxCrew;
+        this.flag = yacht.flag;
     }
 
     @Override
     public String toString() {
-        return "Yacht{" + "nauticalMiles=" + nauticalMiles + ", maxCrew=" + maxCrew + ", flag=" + flag + ", engine=" + engine + '}';
+        return super.toString()+"Yacht{" + "nauticalMiles=" + nauticalMiles + ", maxCrew=" + maxCrew + ", flag=" + flag + "}\n";
     }
     
 }
