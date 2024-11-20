@@ -6,7 +6,7 @@ package proiectjava.dealershipproiect;
 
 /**
  *
- * @author aa437
+ * @author aa437 
  */
 public class Motorcycle extends Vehicle {
     private int mileage, topSpeed;
