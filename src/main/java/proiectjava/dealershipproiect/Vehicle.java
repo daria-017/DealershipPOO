@@ -22,7 +22,7 @@ public class Vehicle {
     Transmission transmission;
     ImageIcon photo;
     
-    Vehicle(){
+    public Vehicle(){
         id=0;
         brand="unknown";
         model="unknown";
@@ -34,7 +34,7 @@ public class Vehicle {
         transmission=new Transmission();
         photo=new ImageIcon();
     }
-    Vehicle(int id, String brand, String model, int year, Color color, int price, short weight,  Engine engine,Transmission transmission, ImageIcon photo){
+    public Vehicle(int id, String brand, String model, int year, Color color, int price, int weight,  Engine engine,Transmission transmission, ImageIcon photo){
         this.id=id;
         this.brand=brand;
         this.model=model;
@@ -47,7 +47,7 @@ public class Vehicle {
         this.photo=photo;
         
     }
-    Vehicle(Vehicle vehicle){
+    public Vehicle(Vehicle vehicle){
         this.id=vehicle.id;
         this.brand=vehicle.brand;
         this.model=vehicle.model;
@@ -138,6 +138,11 @@ public class Vehicle {
 
     public void setPhoto(ImageIcon photo) {
         this.photo = photo;
+    }
+    
+    public String toString(){
+        return " id"+id+" brand: "+brand+" model: "+model+" year: "+" color: "+color+" price: "+price+" weight(in kg): "+weight+"engine={" + (engine != null ? engine.toString() : "No engine") + "}" +
+           " transmission={" + (transmission != null ? transmission.toString() : "No transmission");
     }
     
 }
