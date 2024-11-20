@@ -28,9 +28,10 @@ public class Scooter extends Vehicle{
         this.topSpeed = 0;
     }
             
-        public Scooter(String type, boolean abs, boolean offroad, boolean sport, int topSpeed) 
+        public Scooter(int id, String brand, String model,int year, Color color, int price,int weight, Engine engine, Transmission transmission, ImageIcon photo,
+                String type, boolean abs, boolean offroad, boolean sport, int topSpeed) 
         {
-          super(id, brand,model,year,color,price, short weight,  Engine engine,Transmission transmission, ImageIcon photo);
+          super(id, brand,model,year,color,price,  weight,  engine, transmission,  photo);
         this.type = type;
         this.abs = abs;
         this.offroad = offroad;
