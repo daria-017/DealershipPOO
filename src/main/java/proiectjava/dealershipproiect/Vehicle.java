@@ -10,7 +10,7 @@ package proiectjava.dealershipproiect;
  */
 import javax.swing.ImageIcon;
 import java.awt.Color;
-abstract class Vehicle {
+public class Vehicle {
     int id;
     String brand;
     String model;
@@ -60,6 +60,7 @@ abstract class Vehicle {
         this.photo=vehicle.photo;
         
     }
+    
     public int getId() {
         return id;
     }
@@ -141,7 +142,7 @@ abstract class Vehicle {
     }
     
     public String toString(){
-        return " id: "+id+" brand: "+brand+" model: "+model+" year: "+" color: "+color+" price: "+price+" weight(in kg): "+weight+"engine={" + (engine != null ? engine.toString() : "No engine") + "}" +
+        return " id: "+id+" brand: "+brand+" model: "+model+" year: "+year+" color: "+color+" price: "+price+" weight(in kg): "+weight+"engine={" + (engine != null ? engine.toString() : "No engine") + "}" +
            " transmission={" + (transmission != null ? transmission.toString() : "No transmission");
     }
     
