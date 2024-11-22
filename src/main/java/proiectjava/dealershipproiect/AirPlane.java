@@ -3,8 +3,12 @@ package proiectjava.dealershipproiect;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 
+/**
+ *
+ * @author Daria
+ */
 public class AirPlane extends Vehicle {
-    private int maxAltitude; // Altitudine maximă (în picioare sau metri)
+    private int maxAltitude; // Altitudine maximă in metri
     private int maxRange;    // Distanța maximă (în kilometri)
     private int maxSpeed;    // Viteza maximă (în km/h)
     private int passengerCapacity; // Număr de pasageri
@@ -15,7 +19,7 @@ public class AirPlane extends Vehicle {
     private boolean highSpeed;      // Este un avion de mare viteză?
     private String category;        // Categoria avionului (business, comercial, etc.)
 
-    // Constructor implicit
+    
     public AirPlane() {
         super();
         this.maxAltitude = 0;
@@ -30,9 +34,8 @@ public class AirPlane extends Vehicle {
         this.category = "unknown";
     }
 
-    // Constructor cu toți parametrii
-     public AirPlane(int id, String brand, String model, int year, Color color, int price, int weight,
-                    Engine engine, Transmission transmission, ImageIcon photo, int maxAltitude,
+    
+     public AirPlane(int id, String brand, String model, int year, Color color, double price, int weight,  Engine engine,Transmission transmission, ImageIcon photo, int maxAltitude,
                     int maxRange, int maxSpeed, int passengerCapacity, int numberOfWings, 
                     boolean luggageCapacity, boolean cargo, boolean highSpeed, String category,
                     int engineCycles) {
@@ -48,7 +51,7 @@ public class AirPlane extends Vehicle {
         this.category = category;
         this.engineCycles = engineCycles;
     }
-    // Constructor de copiere
+    
     public AirPlane(AirPlane other) {
         super(other);
         this.maxAltitude = other.maxAltitude;
@@ -146,7 +149,7 @@ public class AirPlane extends Vehicle {
         this.category = category;
     }
 
-    // Suprascrierea metodei toString()
+    
     @Override
     public String toString() {
         return "AirPlane "+super.toString()+"max altitude: "+maxAltitude+" max range: "+maxRange+" max speed: "+maxSpeed+" passenger capacity: "+passengerCapacity+
