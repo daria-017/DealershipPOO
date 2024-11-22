@@ -10,14 +10,14 @@ package proiectjava.dealershipproiect;
  */
 import javax.swing.ImageIcon;
 import java.awt.Color;
-public class Vehicle {
-    int id;
-    String brand;
-    String model;
-    int year;
-    Color color;
-    int price;
-    int weight;
+abstract class Vehicle {
+    private int id;
+    private String brand;
+    private String model;
+    private int year;
+    private Color color;
+    private double price;
+    private int weight;
     Engine engine;
     Transmission transmission;
     ImageIcon photo;
@@ -34,7 +34,7 @@ public class Vehicle {
         transmission=new Transmission();
         photo=new ImageIcon();
     }
-    public Vehicle(int id, String brand, String model, int year, Color color, int price, int weight,  Engine engine,Transmission transmission, ImageIcon photo){
+    public Vehicle(int id, String brand, String model, int year, Color color, double price, int weight,  Engine engine,Transmission transmission, ImageIcon photo){
         this.id=id;
         this.brand=brand;
         this.model=model;
@@ -42,8 +42,8 @@ public class Vehicle {
         this.color=color;
         this.price=price;
         this.weight=weight;
-        this.engine=engine;
-        this.transmission=transmission;
+        this.engine=new Engine(engine);
+        this.transmission=new Transmission(transmission);
         this.photo=photo;
         
     }
@@ -101,11 +101,11 @@ public class Vehicle {
         this.color = color;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
