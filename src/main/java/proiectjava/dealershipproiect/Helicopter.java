@@ -14,17 +14,17 @@ import javax.swing.ImageIcon;
 
 
 public class Helicopter extends Vehicle {
-    private int maxAltitude; // Altitudine maximă (în picioare sau metri)
+    private int maxAltitude; // Altitudine maximă in metri
     private int maxRange;    // Distanța maximă (în kilometri)
     private int maxSpeed;    // Viteza maximă (în km/h)
     private short numberOfBlades; // Număr de pale ale rotorului
     private int loudness;          // Nivel de zgomot (dB)
     private int engineCycles;      // Număr de cicluri ale motorului
     private boolean militaryAircraft; // Este elicopter militar sau nu
-    private boolean cargo;          // Este destinat transportului de mărfuri?
+    private boolean cargo;          // Este destinat transportului de mărfuri
     private String rotorType;       // Tip de rotor (de exemplu, coaxial, tandem)
 
-    // Constructor implicit
+    
     public Helicopter() {
         super();
         this.maxAltitude = 0;
@@ -38,9 +38,9 @@ public class Helicopter extends Vehicle {
         this.rotorType = "unknown";
     }
 
-    // Constructor cu toți parametrii
-    public Helicopter(int id, String brand, String model, int year, Color color, int price, int weight,
-                    Engine engine, Transmission transmission, ImageIcon photo, int maxAltitude, int maxRange, int maxSpeed,
+    
+    public Helicopter(int id, String brand, String model, int year, Color color, double price, int weight,  Engine engine,Transmission transmission, ImageIcon photo
+            , int maxAltitude, int maxRange, int maxSpeed,
                       short numberOfBlades, int loudness, int engineCycles, boolean militaryAircraft,
                       boolean cargo, String rotorType) {
         super(id, brand, model, year, color, price, weight, engine, transmission, photo);
@@ -55,7 +55,7 @@ public class Helicopter extends Vehicle {
         this.rotorType = rotorType;
     }
 
-    // Constructor de copiere
+    
     public Helicopter(Helicopter other) {
         super(other);
         this.maxAltitude = other.maxAltitude;
@@ -142,7 +142,7 @@ public class Helicopter extends Vehicle {
         this.rotorType = rotorType;
     }
 
-    // Suprascrierea metodei toString()
+  
     @Override
      public String toString() {
         return "Helicopter "+super.toString()+"max altitude: "+maxAltitude+" max range: "+maxRange+" max speed: "+maxSpeed+" engine cycles: "+engineCycles+" number of blades"+numberOfBlades+" loudness: "+loudness+
