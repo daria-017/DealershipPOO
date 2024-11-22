@@ -96,6 +96,12 @@ public class Car extends Vehicle {
     public String getBody() {
         return this.body;
     }
+    public String schimbAnvelope() {
+        return "Am schimbat anvelopele la masina.";
+    }
+    public String schimbUlei() {
+        return "Am schimbat uleiul la masina.";
+    }
     
     // toString method:
     @Override
