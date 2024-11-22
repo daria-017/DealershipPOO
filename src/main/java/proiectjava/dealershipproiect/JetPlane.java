@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
  * @author Daria
  */
 public class JetPlane extends Vehicle {
-    private int maxAltitude; // Altitudine maximă (în picioare sau metri)
+    private int maxAltitude; // Altitudine maximă in metri
     private int maxRange;    // Distanța maximă (în kilometri)
     private int maxSpeed;    // Viteza maximă (în km/h)
     private int engineCycles;         // Număr de cicluri ale motorului
@@ -22,10 +22,8 @@ public class JetPlane extends Vehicle {
     private String propulsionSystem;  // Tipul sistemului de propulsie
     
     
-    //private Engine engine;            // Instanță a clasei Engine
-    //private Transmission transmission;// Instanță a clasei Transmission
 
-    // Constructor implicit
+    
     public JetPlane() {
         super();
         this.maxAltitude = 0;
@@ -40,9 +38,8 @@ public class JetPlane extends Vehicle {
 
    
     }    
-    // Constructor cu toți parametrii
-    public JetPlane(int id, String brand, String model, int year, Color color, int price, int weight,
-                    Engine engine, Transmission transmission, ImageIcon photo, int maxAltitude, int maxRange, int maxSpeed,
+   
+    public JetPlane(int id, String brand, String model, int year, Color color, double price, int weight,  Engine engine,Transmission transmission, ImageIcon photo, int maxAltitude, int maxRange, int maxSpeed,
                     boolean militaryAircraft, boolean luggageCapacity, String propulsionSystem, boolean highSpeed,
                     int engineCycles) {
         super(id, brand, model, year, color, price, weight, engine, transmission, photo);
@@ -54,11 +51,10 @@ public class JetPlane extends Vehicle {
         this.propulsionSystem = propulsionSystem;
         this.highSpeed = highSpeed;
         this.engineCycles = engineCycles;
-       // this.engine = engine;
-       // this.transmission = transmission;
+      
     }
 
-    // Constructor de copiere
+   
     public JetPlane(JetPlane jetplane) {
         super(jetplane);
         this.maxAltitude = jetplane.maxAltitude;
