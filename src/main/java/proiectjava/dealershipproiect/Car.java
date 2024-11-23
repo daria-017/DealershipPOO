@@ -26,7 +26,7 @@ public class Car extends Vehicle {
         this.body = "";
     }
     
-    public Car(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+    public Car(int id,String brand, String model,short year,Color color, double price,int weight,Engine engine,Transmission transmission,
             ImageIcon photo, int mileage, int topSpeed, boolean isConvertible, boolean abs, boolean gps, String body) {
         super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.mileage = mileage;

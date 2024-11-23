@@ -25,7 +25,7 @@ public class Motorcycle extends Vehicle {
         this.type = "";
     }
 
-    public Motorcycle(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+    public Motorcycle(int id,String brand, String model,short year,Color color, double price,int weight,Engine engine,Transmission transmission,
             ImageIcon photo, int mileage, int topSpeed, boolean abs, boolean sport, String type) {
         super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.mileage = mileage;

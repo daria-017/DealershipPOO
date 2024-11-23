@@ -24,7 +24,7 @@ public class Truck extends Vehicle {
         this.cargoSensor = false;
     }
     
-    public Truck(int id,String brand, String model,int year,Color color, int price,int weight,Engine engine,Transmission transmission,
+    public Truck(int id,String brand, String model,short year,Color color, double price,int weight,Engine engine,Transmission transmission,
             ImageIcon photo, int mileage, int maxWeight, int capacityInKg, boolean backupSound, boolean cargoSensor) {
         super(id, brand, model,year, color, price, weight, engine, transmission, photo);
         this.mileage = mileage;
