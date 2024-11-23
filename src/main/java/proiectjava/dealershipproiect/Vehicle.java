@@ -14,7 +14,7 @@ public class Vehicle {
     private int id;
     private String brand;
     private String model;
-    private int year;
+    private short year;
     private Color color;
     private double price;
     private int weight;
@@ -34,7 +34,7 @@ public class Vehicle {
         transmission=new Transmission();
         photo=new ImageIcon();
     }
-    public Vehicle(int id, String brand, String model, int year, Color color, double price, int weight,  Engine engine,Transmission transmission, ImageIcon photo){
+    public Vehicle(int id, String brand, String model, short year, Color color, double price, int weight,  Engine engine,Transmission transmission, ImageIcon photo){
         this.id=id;
         this.brand=brand;
         this.model=model;
@@ -89,7 +89,7 @@ public class Vehicle {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(short year) {
         this.year = year;
     }
 
