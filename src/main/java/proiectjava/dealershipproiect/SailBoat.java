@@ -1,44 +1,91 @@
 package proiectjava.dealershipproiect;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Dragos :>
  */
-public class SailBoat {
+public class SailBoat extends Vehicle {
 
     private int nauticalMiles;
-    private Engine engine;
-    private Transmission transmission;
+    private boolean gps;
+    private double accelerationTime;
     private boolean sonar;
     private boolean hasLifeBuoy;
 
-    public SailBoat() {
+    SailBoat() {
+        super();
         nauticalMiles = 0;
-        engine = new Engine();
-        transmission = new Transmission();
+        gps = false;
+        accelerationTime = 0;
         sonar = false;
         hasLifeBuoy = false;
     }
 
-    public SailBoat(int nauticalMiles, Engine engine, Transmission transmission, boolean sonar, boolean hasLifeBuoy) {
+    SailBoat(int id, String brand, String model, short year, Color color, double price, int weight, Engine engine, Transmission transmission, ImageIcon photo,
+            int nauticalMiles, boolean gps, double accelerationTime, boolean sonar, boolean hasLifeBuoy) {
+        super(id, brand, model, year, color, price, weight, engine, transmission, photo);
         this.nauticalMiles = nauticalMiles;
-        this.engine = engine;
-        this.transmission = transmission;
+        this.gps = gps;
+        this.accelerationTime = accelerationTime;
         this.sonar = sonar;
         this.hasLifeBuoy = hasLifeBuoy;
     }
 
-    public SailBoat(SailBoat b) {
-        this.nauticalMiles = b.nauticalMiles;
-        this.engine = b.engine;
-        this.transmission = b.transmission;
-        this.sonar = b.sonar;
-        this.hasLifeBuoy = b.hasLifeBuoy;
+    SailBoat(SailBoat s) {
+        super(s);
+        this.nauticalMiles = s.nauticalMiles;
+        this.gps = s.gps;
+        this.accelerationTime = s.accelerationTime;
+        this.sonar = s.sonar;
+        this.hasLifeBuoy = s.hasLifeBuoy;
     }
 
     @Override
     public String toString() {
-        return "Nautical Miles = " + nauticalMiles + ", Engine = " + engine + ", Transmission = " + transmission
+        return super.toString() + "Nautical Miles = " + nauticalMiles + ", GPS = " + gps + ", Acceleration Time = " + accelerationTime
                 + ", Sonar = " + sonar + ", Has Life Buoy = " + hasLifeBuoy;
+    }
+
+    public int getNauticalMiles() {
+        return nauticalMiles;
+    }
+
+    public boolean getGps() {
+        return gps;
+    }
+
+    public double getAccelerationTime() {
+        return accelerationTime;
+    }
+
+    public boolean getSonar() {
+        return sonar;
+    }
+
+    public boolean getHasLifeBuoy() {
+        return hasLifeBuoy;
+    }
+
+    public void setNauticalMiles(int nauticalMiles) {
+        this.nauticalMiles = nauticalMiles;
+    }
+
+    public void setGps(boolean gps) {
+        this.gps = gps;
+    }
+
+    public void setAccelerationTime(double accelerationTime) {
+        this.accelerationTime = accelerationTime;
+    }
+
+    public void setSonar(boolean sonar) {
+        this.sonar = sonar;
+    }
+
+    public void setHasLifeBuoy(boolean hasLifeBuoy) {
+        this.hasLifeBuoy = hasLifeBuoy;
     }
 }
