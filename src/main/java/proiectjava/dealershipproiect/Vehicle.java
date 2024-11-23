@@ -10,7 +10,7 @@ package proiectjava.dealershipproiect;
  */
 import javax.swing.ImageIcon;
 import java.awt.Color;
-abstract class Vehicle {
+public class Vehicle {
     private int id;
     private String brand;
     private String model;
